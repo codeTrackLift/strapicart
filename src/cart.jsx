@@ -95,7 +95,8 @@ const Products = (props) => {
     const { Fragment, useState, useEffect, useReducer } = React;
     const [query, setQuery] = useState("products");
     const [{ data, isLoading, isError }, doFetch] = useDataApi(
-        "http://localhost:1337/api/products",
+        // "http://localhost:1337/api/products",
+        "https://urchin-app-evpgp.ondigitalocean.app/api/products",
         {
             data: [],
         }
@@ -228,7 +229,8 @@ const Products = (props) => {
                         event.preventDefault();
                         // console.log(`~Restock called on ${query}`);
                         // restockProducts(query);
-                        restockProducts(`http://localhost:1337/api/${query}`);
+                        // restockProducts(`http://localhost:1337/api/${query}`);
+                        restockProducts(`https://urchin-app-evpgp.ondigitalocean.app/api/${query}`);
                     }}
                 >
                     <input
